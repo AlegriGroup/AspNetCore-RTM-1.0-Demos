@@ -1,0 +1,39 @@
+﻿@using System
+@{
+    ViewData["Title"] = "Tag Helper Demo";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>Achors</h2>
+
+        <h3>Old way:</h3>
+        <p>@@Html.ActionLink("Register", "Register", "Account")</p>
+    </div>
+    <div class="col-md-6">
+        <h2>&nbsp;</h2>
+
+        <h3>New way:</h3>
+        <p>&lt;a asp-controller="Account" asp-action="Register"&gt;Register&lt;/a&gt;</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Cache</h2>
+
+        <p>Uncached: @DateTime.Now.ToString("HH:mm:ss")</p>
+        <cache expires-after="@TimeSpan.FromSeconds(10d)">
+            <p>Cached: @DateTime.Now.ToString("HH:mm:ss")</p>
+        </cache>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>Custom: Random String</h2>
+
+        <random-string Length="15"/>
+    </div>
+</div>
