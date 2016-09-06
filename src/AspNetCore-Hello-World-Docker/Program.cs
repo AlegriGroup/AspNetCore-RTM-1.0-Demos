@@ -2,7 +2,7 @@
 using System.IO;
 using Microsoft.AspNetCore.Hosting;
 
-namespace AspNetCore_Mvc_Docker
+namespace AspNetCore_Hello_World_Docker
 {
     public class Program
     {
