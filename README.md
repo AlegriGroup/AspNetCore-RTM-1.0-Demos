@@ -1,7 +1,7 @@
 [![Alegri](assets/Alegri-Logo.png)](http://www.alegri.eu)
 
 # ASP.NET Core 1.0 RTM Demo Applications
-*by [Alegri International Service GmbH](http://www.alegri.eu)
+*by [Alegri International Service GmbH](http://www.alegri.eu)*
 
 # Description
 Several applications of ASP.NET and ASP.NET Core.
