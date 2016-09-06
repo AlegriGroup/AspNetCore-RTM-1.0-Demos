@@ -1,6 +1,6 @@
 [![Alegri](assets/Alegri-Logo.png)](http://www.alegri.eu)
 
-# ASP.NET CRTM 1.0 ore Demo Applications
+# ASP.NET Core 1.0 RTM Demo Applications
 *by [Alegri International Service GmbH](http://www.alegri.eu)
 
 # Description
