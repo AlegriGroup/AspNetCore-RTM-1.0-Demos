@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace AspNetCore_Mvc_TagHelper_CoreFx.Helpers
+namespace AspNetCore_Mvc_TagHelper_CoreFx.TagHelpers
 {
     [HtmlTargetElement("random-string", TagStructure = TagStructure.NormalOrSelfClosing)]
     public class RandomStringTagHelper : TagHelper

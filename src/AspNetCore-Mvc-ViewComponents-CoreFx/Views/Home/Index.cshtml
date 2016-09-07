@@ -1,0 +1,16 @@
+﻿@using System.ComponentModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="row">
+    <div class="col-md-6">
+        <h2>View Component Alegri Address</h2>
+        @await Component.InvokeAsync("AlegriAddress")
+    </div>
+    <div class="col-md-6">
+        <h2>View Component Random String</h2>
+        @await Component.InvokeAsync("RandomString", new { length = 10 })
+    </div>
+</div>
