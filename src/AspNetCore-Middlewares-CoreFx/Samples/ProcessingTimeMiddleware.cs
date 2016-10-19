@@ -26,13 +26,13 @@ namespace AspNetCore_Middlewares_CoreFx.Samples
         {
             DateTime start = DateTime.UtcNow;
 
-            // Execute
+            context.Response.OnStarting(x =>
+            {
+                context.Response.Headers.Add("X-Processing-Time", new[] { DateTime.UtcNow.Subtract(start).TotalMilliseconds.ToString("0.00") });
+                return Task.CompletedTask;
+            }, null);
+            
             await _next(context);
-
-            DateTime end = DateTime.UtcNow;
-
-            TimeSpan duration = end - start;
-            context.Response.Headers.Add("X-Processing-Time", duration.TotalMilliseconds.ToString("0.00"));
         }
     }
 }
