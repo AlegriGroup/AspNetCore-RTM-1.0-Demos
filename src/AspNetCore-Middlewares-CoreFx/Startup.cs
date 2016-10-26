@@ -26,6 +26,9 @@ namespace AspNetCore_Middlewares_CoreFx
 
             // ===== Demo Middlewares
 
+
+            app.UseProcessingTime();
+
             //app.UseSimulatedLatency(
             //    min: TimeSpan.FromMilliseconds(10),
             //    max: TimeSpan.FromMilliseconds(500));
@@ -42,7 +45,6 @@ namespace AspNetCore_Middlewares_CoreFx
                 await context.Response.WriteAsync("Hello World!");
             });
 
-            //app.UseProcessingTime();
         }
     }
 }
