@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
@@ -24,11 +25,13 @@ namespace AspNetCore_Middlewares_CoreFx.Samples
 
         public async Task Invoke(HttpContext context)
         {
-            DateTime start = DateTime.UtcNow;
+            var watch = Stopwatch.StartNew();
 
             context.Response.OnStarting(x =>
             {
-                context.Response.Headers.Add("X-Processing-Time", new[] { DateTime.UtcNow.Subtract(start).TotalMilliseconds.ToString("0.00") });
+                watch.Stop();
+
+                context.Response.Headers.Add("X-Processing-Seconds", new[] { watch.Elapsed.ToString("ss\\.fffffff") });
                 return Task.CompletedTask;
             }, null);
             
